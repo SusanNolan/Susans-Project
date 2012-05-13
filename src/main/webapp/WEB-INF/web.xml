@@ -11,3 +11,18 @@
   </javaee:webservice-description>
 </javaee:webservices>
 
+
+<servlet>
+		<servlet-name>swap</servlet-name>
+		<servlet-class>SusansCitCloudApp.SwapServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>swap</servlet-name>
+		<url-pattern>/swap</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>Shopping list.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
