@@ -69,7 +69,7 @@ public class SwapServlet extends HttpServlet {
 		doForward(req, resp);
 	}
 
-	private SwapRepository getSwap(HttpServletRequest req) {
+	private Swaprepository getSwap(HttpServletRequest req) {
 		return ctx.getBean(Swaprepository.class);
 	}
 

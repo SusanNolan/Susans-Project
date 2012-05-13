@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<javaee:webservices version="1.2" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/javaee_web_services_1_2.xsd ">
-  <javaee:webservice-description>
-    <javaee:webservice-description-name>token</javaee:webservice-description-name>
-    <javaee:port-component>
-      <javaee:port-component-name>token</javaee:port-component-name>
-      <javaee:service-impl-bean>
-        <javaee:ejb-link>token</javaee:ejb-link>
-      </javaee:service-impl-bean>
-    </javaee:port-component>
-  </javaee:webservice-description>
-</javaee:webservices>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd ">
 
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
 
-<servlet>
-		<servlet-name>swap</servlet-name>
-		<servlet-class>SusansCitCloudApp.SwapServlet</servlet-class>
+	<filter>
+		<filter-name>hiddenMethod</filter-name>
+		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>hiddenMethod</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>Swap</servlet-name>
+		<servlet-class>ie.cit.cloudapp.TodoServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>swap</servlet-name>
-		<url-pattern>/swap</url-pattern>
+		<servlet-name>Swap</servlet-name>
+		<url-pattern>/swaps</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
-		<welcome-file>Shopping list.jsp</welcome-file>
+		<welcome-file>ShoppingList.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
