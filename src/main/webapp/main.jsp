@@ -8,6 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-Hello
+Susans Shopping List
+
+
+Please add and Remove Items
 </body>
 </html>
