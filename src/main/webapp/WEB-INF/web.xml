@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javaee:webservices version="1.2" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/javaee_web_services_1_2.xsd ">
+  <javaee:webservice-description>
+    <javaee:webservice-description-name>token</javaee:webservice-description-name>
+    <javaee:port-component>
+      <javaee:port-component-name>token</javaee:port-component-name>
+      <javaee:service-impl-bean>
+        <javaee:ejb-link>token</javaee:ejb-link>
+      </javaee:service-impl-bean>
+    </javaee:port-component>
+  </javaee:webservice-description>
+</javaee:webservices>
+
