@@ -1,6 +1,7 @@
 package SusansCitCloudApp;
 
 public class Swap {
+	private int id;
 	private String text;
 	private boolean done;
 
@@ -20,8 +21,12 @@ public class Swap {
 		this.done = done;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 }
-
-
-
-
