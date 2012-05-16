@@ -1,8 +1,8 @@
+<%@ page import="SusansCitCloudApp.Swap"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<jsp:useBean id="repo" class="SusansCitCloudApp.Swaprepository"
-	scope="session"></jsp:useBean>
 <html>
 <head>
 <link rel="stylesheet" href="styles/style.css">
@@ -11,9 +11,6 @@
 </head>
 <body>
 Susans Shopping List
-
-
-Please add and Remove Items
 
 
 	<c:forEach items="${swaps}" var="swaps" varStatus="row">
@@ -37,7 +34,7 @@ Please add and Remove Items
 		</form>
 		<br />
 	</c:forEach>
-	<h2>Create new SWAP</h2>
+	<h2>Add Remove items</h2>
 	<form method="post">
 		Text: <input name="text"><input type="submit">
 	</form>
